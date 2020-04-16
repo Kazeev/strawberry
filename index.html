@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet">
+    <title>Strawberry</title>
+</head>
+<body>
+    <div class="bred">
+        <textarea name="comment" rows="10" cols="10" wrap="hard"></textarea>
+        <input type="text" maxlength="15" size = "10"  name="q" required placeholder="q" >
+    </div>
+<div class="form-wrap">
+    <div class="profile">
+        <h1 class="form">Регистрация заказа</h1>
+    </div>
+    <form class="form">
+        <div>
+            <input type="text" maxlength="15" name="name" required placeholder="Имя"></div>
+        <div>
+            <input type="email" maxlength="20" name="email" required placeholder="E-mail">
+        </div>
+        <div>
+            <input type="text"  maxlength="30" name="address" required placeholder="Адрес">
+        </div>
+        <div>
+            <input type="tel" maxlength="16" name="telephone" required placeholder="Номер телефона">
+        </div>
+        <div>
+            <input type="text" maxlength="16" name="cardNumber" required placeholder="Номер карты">
+        </div>
+        <div>
+            <input type="password" maxlength="3" name="CVV" required placeholder="CVV код">
+        </div>
+        <div>
+            <h3>Регион</h3>
+            <div class="radio">
+                <input class="radio_input" name="region" type="radio" id="moscow">
+                <label class="radio_label" for="moscow">Москва</label>
+            </div>
+            <div class="radio">
+                <input class="radio_input" name="region" type="radio" id="orenburg">
+                <label class="radio_label" for="orenburg">Оренбург</label>
+            </div>
+            <div class="radio">
+                <input class="radio_input" name="region" type="radio" id="peter">
+                <label class="radio_label" for="peter">Питер</label>
+            </div>
+        </div>
+        <div>
+            <select name="grade" required>
+                <option>Выберите сорт клубники</option>
+                <option value="Альба">Альба</option>
+                <option value="Кимберли">Кимберли</option>
+                <option value="Клери">Клери</option>
+                <option value="Максим">Максим</option>
+            </select>
+            <div class="select-arrow"></div>
+        </div>
+        <h3>Доп услуги</h3>
+        <div class="checkbox">
+            <label class="container">Подарочная упаковка
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="checkbox">
+            <label class="container">Экспесс доставка
+                <input type="checkbox" disabled>
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div>
+            <b>Коментарий к заказу:</b>
+            <textarea name="comment"></textarea>
+        </div>
+        <div class="buttons">
+        <button class="button" type="submit">Отправить</button>
+        <button class="button" type="reset">Очистить</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,178 @@
+
+.form {
+    border: 1px solid green;
+
+    background: #f5f5f5; /* Цвет фона */
+    width: 300px; /* Ширина формы */
+    margin: auto; /* Выравниваем по центру */
+    padding: 20px; /* Поля вокруг текста */
+}
+
+input[type="text"], [type="email"], [type="tel"], [type="password"] {
+    width: 100%; /* Ширина поля */
+    box-sizing: border-box; /* Ширина не учитывает padding */
+    margin: 10px 0; /* Отступы сверху и снизу */
+    padding: 12px 0; /* Поля вокруг текста */
+    border: none; /* Убираем рамку */
+    border-bottom: 1px solid #ccc; /* Линия снизу */
+    background: transparent; /* Прозрачный фон */
+}
+
+input:focus {
+    outline: none; /* Убираем контур */
+    border-bottom: 2px solid green; /* Синяя линия снизу */
+}
+
+input::placeholder {
+    transition: 0.5s; /* Время трансформации */
+    color: #aaa; /* Цвет подсказки */
+}
+
+input:focus::placeholder {
+    font-size: 10px; /* Размер шрифта */
+    transform: translateY(-16px); /* Сдвигаем вверх */
+}
+
+.radio {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.radio_input {
+    -webkit-appearance: none; /* Chrome */
+    -moz-appearance: none; /* Firefox */
+    appearance: none; /* убираем стандартные кружочки */
+    position: absolute;
+}
+
+.radio_label {
+    padding-left: 25px; /* отступ слева */
+    font-size: 1rem;
+    color: #444;
+    cursor: pointer; /* курсор рука */
+}
+
+.radio_label:before {
+    content: "";
+    display: block; /* не в строку */
+    width: 16px; /* ширина блока */
+    height: 16px; /* высота блока */
+    border: 1px solid #c7c7c7; /* рамка */
+    background-color: #fff; /* цвет фона */
+    border-radius: 50%; /* получаем круг */
+    position: absolute; /* расположен точно в родителе */
+    top: 0; /* расстояние от верха родителя */
+    left: 0; /* расстояние слева от родителя */
+    z-index: 1; /* на нижнем слое */
+    transition: border .1s linear; /* плавный переход для border */
+}
+
+.radio_label:after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: green;
+    border-radius: 50%;
+    opacity: 0; /* полностью прозрачный */
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    z-index: 2; /* на верхнем слое */
+    transition: opacity .1s linear; /* плавный переход для opacity */
+}
+
+.radio_input:checked + .radio_label:before {
+
+    border-color: #319612;
+
+}
+
+.radio_input:checked + .radio_label:after {
+    opacity: 1;
+}
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #c7c7c7;
+}
+
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: green;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 25%;
+    top:  25%;
+    width:  25%;
+    height: 25%;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+}
+textarea {
+    background: #fce9c0; /* Цвет фона */
+    border: 2px solid green; /* Параметры рамки */
+    padding: 10px; /* Поля */
+    width: 100%; /* Ширина */
+    height: 100px; /* Высота */
+    box-sizing: border-box; /* Алгоритм расчёта ширины */
+    font-size: 14px; /* Размер шрифта */
+}
+select{
+    width: 100%; /* Ширина */
+    box-sizing: border-box; /* Алгоритм расчёта ширины */
+    font-size: 14px; /* Размер шрифта */
+    overflow: hidden;
+}
+.button {
+    background-color: green; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.buttons{
+    text-align: center;
+}
+.bred{
+    display: none;
+}
