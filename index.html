@@ -11,7 +11,9 @@
 <body>
     <div class="bred">
         <textarea name="comment" rows="10" cols="10" wrap="hard"></textarea>
-        <input type="text" maxlength="15" size = "10"  name="q" required placeholder="q" >
+        <input type="text" maxlength="15" size = "10"  name="q" placeholder="q" >
+        <input type="color">
+        <input type="range"  required placeholder="range">
     </div>
 <div class="form-wrap">
     <div class="profile">
@@ -20,6 +22,16 @@
     <form class="form">
         <div>
             <input type="text" maxlength="15" name="name" required placeholder="Имя"></div>
+        <div>
+            <div>
+                <input type="url" maxlength="15" name="URL_VK"  placeholder="Ссылка на профиль в VK"></div>
+            <div>
+        <div>
+            <input type="number" maxlength="15" name="age" required placeholder="возраст">
+        </div>
+        <div>
+            <input type="date" name="dateOfBirth" required placeholder="дата рождения">
+        </div>
         <div>
             <input type="email" maxlength="20" name="email" required placeholder="E-mail">
         </div>
@@ -33,34 +45,32 @@
             <input type="text" maxlength="16" name="cardNumber" required placeholder="Номер карты">
         </div>
         <div>
+            <input type="search"  maxlength="30" name="address" required placeholder="Адрес">
+        </div>
+        <div>
+            <input type="password" maxlength="3" name="pass" pattern="/^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/" required placeholder="пароль">
+        </div>
+        <div>
             <input type="password" maxlength="3" name="CVV" required placeholder="CVV код">
         </div>
-        <div>
-            <h3>Регион</h3>
-            <div class="radio">
-                <input class="radio_input" name="region" type="radio" id="moscow">
-                <label class="radio_label" for="moscow">Москва</label>
+            <div>
+               <input  placeholder="Регион" list="character">
+                <datalist id="character">
+                    <option value="Москва"></option>
+                    <option value="Москва"></option>
+                    <option value="Питер"></option>
+                </datalist></p>
+
+                <select name="grade" required>
+                    <option>Выберите сорт клубники</option>
+                    <option value="Альба">Альба</option>
+                    <option value="Кимберли">Кимберли</option>
+                    <option value="Клери">Клери</option>
+                    <option value="Максим">Максим</option>
+                </select>
+                <div class="select-arrow"></div>
             </div>
-            <div class="radio">
-                <input class="radio_input" name="region" type="radio" id="orenburg">
-                <label class="radio_label" for="orenburg">Оренбург</label>
-            </div>
-            <div class="radio">
-                <input class="radio_input" name="region" type="radio" id="peter">
-                <label class="radio_label" for="peter">Питер</label>
-            </div>
-        </div>
-        <div>
-            <select name="grade" required>
-                <option>Выберите сорт клубники</option>
-                <option value="Альба">Альба</option>
-                <option value="Кимберли">Кимберли</option>
-                <option value="Клери">Клери</option>
-                <option value="Максим">Максим</option>
-            </select>
-            <div class="select-arrow"></div>
-        </div>
-        <h3>Доп услуги</h3>
+            <h3>Доп услуги</h3>
         <div class="checkbox">
             <label class="container">Подарочная упаковка
                 <input type="checkbox" checked="checked">
@@ -77,9 +87,15 @@
             <b>Коментарий к заказу:</b>
             <textarea name="comment"></textarea>
         </div>
+                <p>Цена:</p>
+                <form oninput = "с.value = a.valueAsNumber * 100 + b.valueAsNumber * 10">
+                    <input type = "number" id = "a" placeholder="Количество семян"> +
+                    <input type = "number" id = "b" placeholder="Число упоковок"> =
+                    <mark> <output name = "с" for = "a b"> </output> </mark>
+                </form>
         <div class="buttons">
-        <button class="button" type="submit">Отправить</button>
-        <button class="button" type="reset">Очистить</button>
+            <button class="button" type="submit">Отправить</button>
+            <button class="button" type="reset">Очистить</button>
         </div>
     </form>
 </div>

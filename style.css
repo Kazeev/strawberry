@@ -8,7 +8,9 @@
     padding: 20px; /* Поля вокруг текста */
 }
 
-input[type="text"], [type="email"], [type="tel"], [type="password"] {
+input[type="text"], [type="email"], [type="tel"],
+[type="password"], [type="number"], [type="date"], [type="search"]
+, [list="character"], [name="grade"], [type="url"] {
     width: 100%; /* Ширина поля */
     box-sizing: border-box; /* Ширина не учитывает padding */
     margin: 10px 0; /* Отступы сверху и снизу */
